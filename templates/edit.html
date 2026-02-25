@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Edit Book</h3>
+
+<form method="POST">
+    <div class="mb-3">
+        <label>Title</label>
+        <input type="text" name="title" value="{{ book[1] }}" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Author</label>
+        <input type="text" name="author" value="{{ book[2] }}" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Genre</label>
+        <input type="text" name="genre" value="{{ book[3] }}" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Quantity</label>
+        <input type="number" name="quantity" value="{{ book[4] }}" class="form-control" required>
+    </div>
+
+    <button class="btn btn-primary">Update Book</button>
+</form>
+
+{% endblock %}
